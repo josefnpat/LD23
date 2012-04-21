@@ -4,19 +4,6 @@ maplib.map = {}
 
 math.randomseed( os.time() )
 
---[[
--- Random colors!
-maplib.grid_size = 200
-for x = 1,maplib.grid_size do
-  for y = 1,maplib.grid_size/2 do
-    if not maplib.map[x] then
-      maplib.map[x] = {}
-    end
-    maplib.map[x][y] = {math.random(127,255),0,0}
-  end
-end
-]]--
-
 maplib.tiles = love.graphics.newImage("maplib/tilesheet.png")
 maplib.tiles:setFilter("nearest","nearest")
 
@@ -26,8 +13,11 @@ maplib.quads[1] = love.graphics.newQuad(0,0,32,32,maplib.tiles:getWidth(),maplib
 maplib.block_width, maplib.block_depth = 32,16
 maplib.grid_x,maplib.grid_y = 0,0
 
-maplib.scale = 4
+maplib.scale = 1
 
+function maplib.draw_unit()
+
+end
 
 function maplib.draw()
   local screenx,screeny = 1280-200,1024-200
@@ -52,14 +42,17 @@ function maplib.draw()
   end
   love.graphics.setColor(255,255,255)
   love.graphics.rectangle("line",offsetx,offsety,screenx,screeny)
-  love.graphics.print("vx:"..(maplib.grid_x).." vy:"..(maplib.grid_y),0,32)
+  love.graphics.print("vx:"..(maplib.grid_x).." vy:"..(maplib.grid_y),0,16)
+  
+  
+  local mx,my = love.mouse.getPosition()
+  
+  local rmx = math.floor((mx+((my)-mx/2))/32*maplib.scale+0.5)
+  local rmy = math.floor((((my)-mx/2))/16*maplib.scale+0.5)
+  love.graphics.print("rmx:"..(rmx).." rmy:"..(rmy),0,32)
 end
 
 function maplib.loadmap(mapid)
-
-  if not mapid  then
-    mapid = 1
-  end
   local source = love.image.newImageData("maplib/world"..mapid..".gif")
   local w, h = source:getWidth(), source:getHeight()
   maplib.grid_size = w
@@ -73,10 +66,7 @@ function maplib.loadmap(mapid)
       maplib.map[x][y] = {r,g,b}
     end
   end
-  
 end
-
-maplib.loadmap(1)
 
 function maplib.update(dt)
   local modx,mody = 0,0
@@ -110,4 +100,5 @@ function maplib.mousepressed(x,y,button)
     end
   end
 end
+
 return maplib
