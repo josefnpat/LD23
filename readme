@@ -22,8 +22,11 @@ Tile Types:
   Resource Generator && Resource Storage
   Unit Generator && Unit Storage
   Research Lab
-  Units (number of units determine how "crowded" the tile is)
+  Attack Towers
   Wall && Door
+  Like rebuild 2?
+
+like netwars, towers attack local stuff automatically?
   
 Defensive AI only: Moves to the enemy if it sees it.
 
@@ -73,8 +76,6 @@ You get to place armies every turn depending on how many "countries" you have
 easy - even pieces
 medium - less pices
 hard - almost none
-
-Like rebuild 2?
 
 
 

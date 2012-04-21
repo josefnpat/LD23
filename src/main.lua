@@ -8,3 +8,7 @@ end
 function love.update(dt)
   maplib.update(dt)
 end
+
+function love.mousepressed(x,y,button)
+  maplib.mousepressed(x,y,button)
+end
