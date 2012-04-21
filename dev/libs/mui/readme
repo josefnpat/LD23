@@ -1,0 +1,38 @@
+MechanicalUI
+  
+Natural Electronic Input: (http://www.pages.drexel.edu/~pb762/000_0462.JPG)
+
+USE ONE TYPE FOR EACH PURPOSE TO OFFER FAMILIARITY
+
+  Buttons (Length of push)            [  submit  ]
+  
+  Switches (binary, visual change)    [_]   [X]
+  
+  Display - Binary (output only)      {X}
+
+  Poteniometer (e.g. volume)          [--|-------]    
+  
+  Dial (Output only)                  {--|-------}
+
+  Switches (multi state)              [_][X][_][_]
+    
+  Display - LCD (output only)         {HELLO WORL}
+  
+  Static Text / Images (labels etc)   HELLO WORLD
+
+  Dead Switch (Slide lock?)           [>>>>>-----]
+  
+  Groupings                           |--TITLE---|
+                                      |>content  |
+                                      |----------|
+                                      
+  Screen placement with memory (lsdj) [A][B][*][D]
+  
+  Wire connections (x->x)             >TEXT< [ ]---->[ ] >TEXT<
+                                      >TEXT< [ ]\    [ ] >TEXT<
+                                      >TEXT< [ ] \   [ ] >TEXT<
+                                      >TEXT< [ ]  \  [ ] >TEXT<
+                                      >TEXT< [ ]   \ [ ] >TEXT<
+                                      >TEXT< [ ]    >[ ] >TEXT<
+  
+  Number Counter                      [00000102[+-]]
