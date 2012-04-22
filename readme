@@ -19,12 +19,9 @@ IDEAS:
 ISOMETRIC 32x32
 
 Tile Types:
-  Resource Generator && Resource Storage
-  Unit Generator && Unit Storage
+  Cash Generator && Cash Storage
   Research Lab
   Attack Towers
-  Wall && Door
-  Like rebuild 2?
 
 like netwars, towers attack local stuff automatically?
   
@@ -78,4 +75,9 @@ medium - less pices
 hard - almost none
 
 
-
+  --ScreenX = OriginX – (MapY * TileWidth/2) + (MapX * TileWidth/2) – (TileWidth/2)
+  --ScreenY = OriginY + (MapY * TileDepth/2) + (MapX * TileDepth/2
+  
+  
+    mrx = (mx – my)
+  mry = (my + mx) / 2
