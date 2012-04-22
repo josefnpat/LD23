@@ -4,6 +4,8 @@ require("gamelib/gamelib")
 require("barlib/barlib")
 
 love.mouse.setVisible( false )
+math.randomseed( os.time() )
+
 function love.draw()
   maplib.draw()
   gamelib.draw()
@@ -13,6 +15,7 @@ end
 
 function love.update(dt)
   maplib.update(dt)
+  gamelib.update(dt)
 end
 
 function love.mousepressed(x,y,button)
@@ -20,7 +23,7 @@ function love.mousepressed(x,y,button)
   maplib.mousepressed(x,y,button)
 end
 
-map = 1
+map = math.random(1,5)
 function love.keypressed(key,uni)
   gamelib.keyboardpressed(key,uni)
   if key == " " then
@@ -37,6 +40,7 @@ units.quad[1] = love.graphics.newQuad(0,0,32,32,units.img:getWidth(),units.img:g
 units.quad[2] = love.graphics.newQuad(32,0,32,32,units.img:getWidth(),units.img:getHeight())
 units.quad[3] = love.graphics.newQuad(64,0,32,32,units.img:getWidth(),units.img:getHeight())
 units.quad[4] = love.graphics.newQuad(96,0,32,32,units.img:getWidth(),units.img:getHeight())
+units.quad[5] = love.graphics.newQuad(128,0,32,32,units.img:getWidth(),units.img:getHeight())
 
 function love.load(arg)
   maplib.loadmap(map)

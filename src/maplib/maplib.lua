@@ -67,7 +67,7 @@ function maplib.draw()
       t_color[2] = color[2]
       t_color[3] = color[3]
       --cursor
-      local tile_alpha
+      local tile_alpha = 255
       if maplib.cursor_x == x and maplib.cursor_y == y then 
         if maplib.cursor_blink % 1 > 0.5 then
           tile_alpha = 127
@@ -84,6 +84,10 @@ function maplib.draw()
           t_color[2] = 255
           t_color[3] = 0
         end
+      end
+      
+      if gamelib.unitselect== 5 and gamelib.dist(maplib.cursor_x,maplib.cursor_y,x,y) <= 10 then
+        tile_alpha = tile_alpha / 2
       end
       
       

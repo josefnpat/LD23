@@ -22,7 +22,8 @@ Tile Types:
   Cash Generator && Cash Storage
   Research Lab
   Attack Towers
-
+  Territory Flag
+  
 like netwars, towers attack local stuff automatically?
   
 Defensive AI only: Moves to the enemy if it sees it.
