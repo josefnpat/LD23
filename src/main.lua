@@ -36,7 +36,7 @@ function love.draw()
       if toggle_winlose == "victory" then
         love.graphics.printf("You are victorious!",0,love.graphics.getHeight()/2,love.graphics.getWidth(),"center")
         love.graphics.printf("=^.^=",0,love.graphics.getHeight()/2+48,love.graphics.getWidth(),"center")
-      elseif toggle_winlose == "victory" then
+      elseif toggle_winlose == "defeat" then
         love.graphics.printf("You have been defeated.",0,love.graphics.getHeight()/2,love.graphics.getWidth(),"center")
         love.graphics.printf("@( * O * )@",0,love.graphics.getHeight()/2+48,love.graphics.getWidth(),"center")
       end
@@ -51,9 +51,6 @@ function love.update(dt)
   elseif state == "game" then
     maplib.update(dt)
     gamelib.update(dt)
-  end
-  if state == "victory" or state =="defeat" then
-    state = "menu"
   end
 end
 
