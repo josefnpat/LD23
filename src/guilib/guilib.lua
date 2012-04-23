@@ -4,7 +4,9 @@ guilib.bar = love.graphics.newImage("guilib/bar.png")
 
 function guilib.draw()
   love.graphics.draw(guilib.bar,0,0,0,love.graphics.getWidth()-200,1)
-  love.graphics.print("Cash: "..gamelib.cash.."/"..gamelib.cash_max,0,0)
+  love.graphics.print("Cash: "..gamelib.cash.."/"..gamelib.cash_max,32,0)
+  love.graphics.print("Research level: "..gamelib.research_level,256,0)
+  --love.graphics.print("enemy_Cash: "..gamelib.enemy_cash.."/"..gamelib.enemy_cash_max,0,16)
   for i = 1,5 do
     if i == gamelib.unitselect then
       love.graphics.setColor(255,255,255,255)

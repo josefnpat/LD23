@@ -11,12 +11,16 @@ maplib.quads = {}
 maplib.quads[1] = love.graphics.newQuad(0,0,32,32,maplib.tiles:getWidth(),maplib.tiles:getHeight())
 
 maplib.block_width, maplib.block_depth = 32,16
-maplib.grid_x,maplib.grid_y = 0,0
 
-maplib.scale = 1
+function maplib.load()
+  maplib.grid_x,maplib.grid_y = 0,0
 
-maplib.screenx,maplib.screeny = love.graphics.getWidth(),love.graphics.getHeight()
-maplib.offsetx,maplib.offsety = 0,0
+  maplib.scale = 1
+
+  maplib.screenx,maplib.screeny = love.graphics.getWidth(),love.graphics.getHeight()
+  maplib.offsetx,maplib.offsety = 0,0
+end
+
 
 maplib.curworld = 1
 maplib.worlds = {}
