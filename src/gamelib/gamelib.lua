@@ -104,8 +104,8 @@ catz = false
 function gamelib.update(dt)
 
   gamelib.tick_dt = gamelib.tick_dt + dt
-  if gamelib.tick_dt > 0.1 then
-    gamelib.tick_dt =  gamelib.tick_dt - 0.1
+  if gamelib.tick_dt > 0.2 then
+    gamelib.tick_dt =  gamelib.tick_dt - 0.2
     
     for x,v in pairs(gamelib.units) do
       for y,unit in pairs(v) do
@@ -119,9 +119,9 @@ function gamelib.update(dt)
               if (cunit.owner and not unit.owner) or (not cunit.owner and unit.owner) then --if other entity
                 if gamelib.dist(x,y,cx,cy) < 12 then
                   if unit.owner then
-                    cunit.hp = cunit.hp - 1-1*gamelib.research_level/100
+                    cunit.hp = cunit.hp - 0.5-1*gamelib.research_level/100
                   else
-                    cunit.hp = cunit.hp - 1-1*gamelib.enemy_research_level/100
+                    cunit.hp = cunit.hp - 0.5-1*gamelib.enemy_research_level/100
                   end
                   if cunit.hp < 0 then
                     gamelib.units[cx][cy] = nil

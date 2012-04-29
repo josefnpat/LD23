@@ -41,7 +41,7 @@ function love.draw()
         love.graphics.printf("@( * O * )@",0,love.graphics.getHeight()/2+48,love.graphics.getWidth(),"center")
       end
     end
---    love.graphics.print("fps:"..love.timer.getFPS( ),0,100)
+    love.graphics.print("fps:"..love.timer.getFPS( ),0,100)
   end
 end
 
