@@ -124,8 +124,8 @@ function love.load(arg)
     {t="Return",cb="mm"}
   }
   local help_desc = "Welcome to Pocket Strife!\nIn this game, there are five types of buildings:\n"
-  help_desc = help_desc .. ">" .. gamelib.unit_name[1] .. ": This building increases your income! Don't leave home without it.\n";
-  help_desc = help_desc .. ">" .. gamelib.unit_name[2] .. ": This building will increase your capacity!\n";
+  help_desc = help_desc .. ">" .. gamelib.unit_name[1] .. ": This building will increase your capacity!\n";
+  help_desc = help_desc .. ">" .. gamelib.unit_name[2] .. ": This building increases your income! Don't leave home without it.\n";
   help_desc = help_desc .. ">" .. gamelib.unit_name[3] .. ": This building will increase the damage of your attack towers! Pew pew pew!\n";
   help_desc = help_desc .. ">" .. gamelib.unit_name[4] .. ": This building will attack your foes, and rob them of their health!\n";
   help_desc = help_desc .. ">" .. gamelib.unit_name[5] .. ": This building will allow you to build other buildings near it! Better build one of these first!\n";
