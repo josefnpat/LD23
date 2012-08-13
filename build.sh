@@ -1,7 +1,7 @@
 #!/bin/bash
 #Configure this, and also ensure you have the dev/build_data/osx.patch ready.
 SRC="src"
-NAME="pocketstrife"
+NAME="PS"
 VERSION=0.8.0
 GIT=`git log --pretty=format:'%h' -n 1`
 
@@ -52,7 +52,7 @@ cp dev/build_data/love.app tmp/${NAME}_${GIT}.app -Rv
 cp ${NAME}_${GIT}.love tmp/${NAME}_${GIT}.app/Contents/Resources/
 patch tmp/${NAME}_${GIT}.app/Contents/Info.plist -i dev/build_data/osx.patch
 cd tmp
-zip -r ../${NAME}_macosx [$GIT].zip ${NAME}_${GIT}.app
+zip -r ../${NAME}_macosx[$GIT].zip ${NAME}_${GIT}.app
 cd ..
 rm tmp/* -rf #tmp cleanup
 
